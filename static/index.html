@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Compiler</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="functionality.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body class="h-screen flex flex-col items-stretch bg-gray-700 font-sans font-bold text-white">
+    <div class="flex items-center h-16 bg-gray-900">
+        <h1 class="px-10 text-2xl">
+            <a href="http://mylink">The Super Tiny Compiler</a>
+        </h1>
+    </div>
+    <div class="h-full flex items-stretch space-x-10 px-10 py-10">
+        <div class="flex flex-col w-3/6">
+            <input class="p-5 h-1/6 bg-gray-900 rounded-2xl" type="text" name="raw-code" id="raw-code" placeholder="Write here.">
+            <button 
+                class="mt-10 bg-blue-400 w-3/6 h-12 rounded-xl hover:bg-blue-600 duration-500"
+                onclick="handleSubmit()"
+            >Compile!
+            </button>
+        </div>
+
+        <div id="response" class="w-3/6 bg-gray-900 rounded-2xl p-5">
+            <h1 id="response-title" class="text-lg mb-5"></h1>
+            <p id="response-text" class="font-mono"></p>
+        </div>
+    </div>
+    <div class="px-10 pb-5">
+        <p class="text-white font-bold text-xs text-right">
+            A project based on <a href="https://github.com/hazbo/the-super-tiny-compiler" class="underline">The Super Tiny Compiler</a>.
+        </p>
+    </div>
+</body>
+</html>
